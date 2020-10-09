@@ -1,0 +1,59 @@
+{% extends "template_public.twig" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 proyectos">
+                <h2 class="mt-5 proyectos__titulo">Proyectos</h2>
+                <div class="row mt-5 proyecto">
+                    <div class="col-md-5 proyecto__foto">
+                        <img src="{{ PUBLIC_PATH }}/img/proyecto.png" alt="">
+                    </div>
+                    <div class="col-md-7 proyecto__body">
+                        <div class="mt-4 mt-md-0 proyecto__fecha"><i class="fas fa-calendar-alt"></i>Junio 15 del 2020</div>
+                        <h2 class="proyecto__titulo">Pagina Personal</h2>
+                        <div class="proyecto__descripcion">
+                            Use flexbox alignment utilities to vertically and horizontally
+                            align columns. Internet Explorer 10-11 do not support vertical
+                            alignment of flex items when the flex container has a min-height
+                            as shown below. See Flexbugs #3 for more details.
+                            Internet Explorer 10-11 do not support vertical
+                            alignment of flex items when the flex container has a min-height
+                            as shown below. See Flexbugs #3 for more details.
+                        </div>
+                        <a href="#" class="btn d-inline-block shadow-none proyecto__btn-ver-mas">Ver Más</a> 
+                    </div>
+                </div>
+                <div class="row mt-5 proyecto">
+                    <div class="col-md-5 proyecto__foto">
+                        <img src="{{ PUBLIC_PATH }}/img/proyecto.png" alt="">
+                    </div>
+                    <div class="col-md-7 proyecto__body">
+                        <div class="mt-4 mt-md-0 proyecto__fecha"><i class="fas fa-calendar-alt"></i>Junio 15 del 2020</div>
+                        <h2 class="proyecto__titulo">Pagina Personal</h2>
+                        <div class="proyecto__descripcion">
+                            Use flexbox alignment utilities to vertically and horizontally
+                            align columns. Internet Explorer 10-11 do not support vertical
+                            alignment of flex items when the flex container has a min-height
+                            as shown below. See Flexbugs #3 for more details.
+                            Internet Explorer 10-11 do not support vertical
+                            alignment of flex items when the flex container has a min-height
+                            as shown below. See Flexbugs #3 for more details.
+                        </div>
+                        <a href="#" class="btn d-inline-block shadow-none proyecto__btn-ver-mas">Ver Más</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 secction">
+                <div class="mt-5">
+                    <h3 class="text-center h5">Otros Temas</h3>
+                    <ul class="list-unstyled mt-5 border-left pl-4">
+                        <li><a href="#" class="f-link">PHP</a></li>
+                        <li><a href="#" class="f-link">JAVA</a></li>
+                        <li><a href="#" class="f-link">MySQL</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{
+    "name": "pagina_pesonal",
+    "description": "",
+    "authors": [
+        {
+            "name": "Franco",
+            "email": "dfrancopurihuaman@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/database": "5.8.36",
+        "twig/twig": "2.12.5"
+    },
+    "require-dev": {
+        "kint-php/kint": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

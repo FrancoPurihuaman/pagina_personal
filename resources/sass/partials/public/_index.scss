@@ -1,0 +1,364 @@
+// PAGE STYLES 'index.php' ------------------ 
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+.carousel {
+    position: static;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+
+    & > h1 {
+        @media (max-width: map-get($map: $breakpoints, $key: md)){
+            font-size: 2rem;
+        }
+    }
+}
+
+.carousel-caption p span:nth-child(1) {
+    display: none;
+    @include from(md){
+        display: inline;
+    }
+}
+
+.carousel-caption-more::after{
+    content: "...";
+    @include from(md){
+        display: none;
+    }
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    height: $heightScreen;
+    background-color: transparent;
+}
+.carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: $heightScreen;
+    z-index: -2;
+}
+
+.carousel-foreground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: $heightScreen;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* MARKETING CONTENT (Featurettes and Works)
+-------------------------------------------------- */
+
+/* Featurettes
+------------------------- */
+.featurette {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+}
+  
+/* Thin out the marketing headings */
+h2.featurette-heading {
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -.05rem;
+    
+    color: #111;
+
+    & {
+        @include to(40em){
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            line-height: 1.4;
+        }
+    }
+}
+  
+.featurette-span{
+    font-size: .7rem;
+    font-weight: bolder;
+    color: #111;
+}
+  
+.featurette-text {
+    text-align: center;
+    padding-top: 2em;
+
+    p {
+        font-size: 1em;
+    }
+
+    & {
+        @media (min-width: map-get($breakpoints, md)){
+            text-align: left;
+            padding-top: 1em;
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+
+        @media (min-width: map-get($breakpoints, lg)){
+            
+            
+            padding-left: 4em;
+            padding-right: 2em;
+        }
+    }
+}
+
+.featurette-image-content{
+    text-align: right;
+
+    & {
+        @media (max-width: map-get($breakpoints, md)){
+            text-align: center;
+        }
+    }
+}
+  
+.featurette-image{
+    width: 60%;
+    max-width: 17rem;
+    height: auto;
+    box-shadow: -0.7em 0.7em 0px $color_tema;
+    position: relative;
+
+    & {
+        @media (min-width: map-get($breakpoints, md)){
+            width: 100%;
+        }
+    }
+
+    & {
+        @media (min-width: map-get($breakpoints, lg)){
+            width: 70%;
+        }
+    }
+}
+
+/* Works
+----------------------------------- */
+.works {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+.works-header {
+    padding-bottom: 4rem;
+}
+.works-header h1 {
+    font-weight: 600;
+    font-size: 2rem;
+    color: #111;
+    text-transform: uppercase;
+}
+.works-item {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.works-item h3 {
+    font-weight: 700;
+    color: #111;
+    font-size: 1.5em;
+}
+.works-item .works-item-fecha {
+    margin-bottom: 0.3em;
+
+    span {
+        font-size: 0.8rem;
+    }
+}
+.works-item img {
+    margin-bottom: .7em;
+}
+.works-item p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+.works-item p a{
+    background-color: rgba(90, 90, 90, 0.1);
+    color: #626262;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.works-grid {
+    @include grid(div, 1, 1, 3);
+
+    & .works-grid__item {
+        border: 1px solid rgba(0,0,0,.125);
+
+        & .card {
+            border: none;
+        }
+
+        & .card-img-top {
+            height: 13rem;
+        }
+    }
+
+    
+
+    &__btn-ver:hover, &__btn-ver:active {
+        background-color: $color_tema !important;
+        color: #fff !important;
+        border: 1px solid $color_tema !important;
+        box-shadow: none !important;
+    }
+
+    &__btn-ver:active {
+        transform : scale(.97) !important;
+    }
+
+    &__btn-ver:focus {
+        box-shadow: none !important;
+    }
+}
+
+
+/* CONTACTAME
+----------------------------------------------*/
+.contact-section{
+    background-color: $color_footer;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.contactame {
+    color: #fff;
+    padding-top: 4em;
+}
+
+.contact-header {
+    text-align: center;
+
+    & h1 {
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 600;
+
+        @media (max-width: map-get($map: $breakpoints, $key: md)) {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.contact-body {
+    padding-top: 2em;
+
+    @media (min-width: map-get($map: $breakpoints, $key: md)){
+        padding-top: 4rem;
+    }
+}
+
+.custom-form-control {
+    font-size: .9rem;
+    color: #fff;
+    border: 1px solid darken($color: #fff, $amount: 60%);
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+.custom-form-control:focus {
+    color: #fff;
+    border: 1px solid darken($color: #fff, $amount: 35%);
+    outline: 0px;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none;
+}
+
+.custom-form-control::placeholder {
+    opacity:1;
+    color: #fff;
+}
+.custom-form-control::-webkit-input-placeholder {
+    opacity:1;
+    color: #fff;
+}
+.custom-form-control::-moz-placeholder {
+    opacity:1;
+    color: #fff;
+}
+.custom-form-control:-moz-placeholder {
+    opacity:1;
+    color: #fff;
+}
+.custom-form-control::-ms-input-placeholder {
+    opacity:1;
+    color: #fff;
+}
+
+.contact-datos__fa i {
+    font-size: 1.2rem;
+}
+
+.contact-datos__fa {
+    flex: 0 0 15%;
+    min-width: 2em;
+    text-align: center;
+}
+
+.contact-datos__info {
+    flex: 0 0 85%;
+    max-width: 80%;
+}
+
+
+/* FOOTER
+------------------------------------- */
+
+.footer {
+    padding-top: 2rem;
+    text-align: center;
+    color: #fff;
+    background-color: $color_footer;
+}
+
+.footer__texto {
+    margin: 2em auto;
+}
+
+.redes-sociales {
+    margin: auto;
+    margin-bottom: 1.5rem;
+    padding: 0px;
+    
+}
+
+.redes-sociales__item {
+    list-style-type: none;
+    display: inline-block;
+    
+    a {
+        display: inline-block;
+        width: 3em;
+        height: 3em;
+        line-height: 3em;
+        margin: 0px 5px;
+        border-radius: 50%;
+        color: #fff;
+        background-color: darken($color_footer, 3%);
+    }
+
+    a:hover, a:focus, a:visited {
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: darken($color_tema, 3%);
+    }
+}

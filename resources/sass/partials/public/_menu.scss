@@ -1,0 +1,118 @@
+/* Menu
+-----------------------------*/
+.f-navbar{
+  width: 100%;
+
+  &--primary {
+    background-color: $color_menu;
+    padding: 1em auto;
+    position: relative;
+    top: 0px;
+    z-index: 1000;
+  }
+
+  &--secundary {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    background-color: transparent;
+  }
+
+  &--medium-enable{
+    @media (max-width : map-get($breakpoints, lg)){
+      background-color: $color_menu;
+      transition-duration: .5s;
+    }
+  }
+
+  &--medium-disable{
+    @media (max-width : map-get($breakpoints, lg)){
+      background-color: $color_menu;
+      transition-duration: .5s;
+    }
+  }
+
+  &--secundary.f-navbar--medium-disable{
+    @media (max-width : map-get($breakpoints, lg)){
+      background-color: transparent;
+      transition-duration: .5s;
+    }
+  }
+}
+
+// Estilos del navbar para cuando se hace scroll hacia habajo
+.f-navbar.f-slideDown{
+  top: 0px;
+  transition: top 0.5s;
+}
+
+// Estilos del navbar para cuando se hace scroll hacia arriba
+.f-navbar.f-slideUp{
+  background-color: $color_menu !important;
+  position: fixed;
+  top: -200;
+  transition: top 0.5s;
+}
+
+.f-navbar .nav-item:hover {
+  @media (max-width: map-get($breakpoints, md)){
+    background-color: darken(rgba($color_menu, .7), 10%);
+  }
+}
+
+// Color de letras de los link del menu
+.f-navbar {
+
+  &--primary .nav-item .nav-link {
+    color: #fff;
+  }
+
+  &--secundary .nav-item .nav-link {
+    color: #fff;
+  }
+}
+
+
+// /* Personalización del submenu
+// ------------------------------------------------------ */
+// .navbar .nav-item .dropdown-menu {
+
+//   // Color de fondo del submenu
+//   background-color: darken(rgba($color2, .5), 10%);
+//   // Color de fondo Para tamaños mayores a 992px
+//   @media (min-width: map-get($breakpoints, lg )){
+//     background-color: darken(rgba($color2, .8), 10%);
+//   }
+
+//   // Color de letra del submenu
+//   & .dropdown-item{
+//     color: #fff;
+    
+//     &:hover {
+//       background-color: rgba($color2, .9);
+//       color: rgba(255, 255, 255, 0.5);
+
+//       @media (min-width: map-get($breakpoints, lg )){
+//         background-color: rgba(255, 255, 255, 0.2);
+//       }
+//     }
+//   }
+// }
+
+
+//  lOGO
+// ----------------------------
+.f-navbar .f-logo{
+  font-family: 'Courgette', cursive;
+  font-weight: bold;
+  color: #fff !important;
+  font-size: 1.8em;
+  padding: 0px auto;
+
+  & {
+      @include to(lg){
+          font-size: 1.4em;
+      }
+  }
+}

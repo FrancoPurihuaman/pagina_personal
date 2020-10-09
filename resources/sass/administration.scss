@@ -1,0 +1,28 @@
+$cssCore: false;
+$cssHelpers: false;
+$devMode: false;
+
+// Breakpoints
+$breakpoints : (
+    xs  : 0,
+    sm  : 576px,
+    md  : 768px,
+    lg  : 992px,
+    xl  : 1200
+);
+
+//Importar libreria ed-grid
+@import './mixins-edgrid/ed-grid.scss';
+
+//Importar stylos del tema adminLte
+@import 'partials/administration/tema';
+
+//Importar base
+@import 'partials/variables';
+@import 'partials/base';
+
+//Importar stylos para la pagina 404
+@import 'partials/404';
+
+//Importar stylos para las paginas privadas
+@import 'partials/administration/logout';

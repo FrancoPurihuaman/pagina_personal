@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>{% block title %} {{ SITE_NAME }} {% endblock %}</title>
+    {% block links %}
+      <!-- Font Awesome -->
+      <link href=" {{ PUBLIC_PATH }}/css/all.min.css" rel="stylesheet">
+      <!-- Bootstrap -->
+      <link href="{{ PUBLIC_PATH }}/css/bootstrap.min.css" rel="stylesheet">
+    {% endblock %}
+  </head>
+  <body class="d-flex flex-column h-100">
+    <header>
+      {% block nav %}
+        <nav id="menu" class="navbar navbar-expand-md navbar-dark f-navbar f-navbar--primary">
+          <div class="container">
+            <a class="navbar-brand letter-logo f-logo" href="{{ PUBLIC_PATH }}">Pagina</a>
+            <button id="menu__btn-toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ PUBLIC_PATH }}/#section-banner">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ PUBLIC_PATH }}/#section-sobremy">Sobre My</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ PUBLIC_PATH }}/#section-contactame">Contáctame</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      {% endblock %}
+    </header>
+    <main class="main" role="main">{% block content %}{% endblock %}</main>
+    
+    <footer class="footer">
+      {% block footer %}
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <ul class="redes-sociales">
+                <li class="redes-sociales__item"><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                <li class="redes-sociales__item"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                <li class="redes-sociales__item"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluit copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <small>&copy; TODOS LOS DERECHOS RESERVADOS</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endblock %}
+    </footer>
+
+    {% block scripts %}
+      <!-- JQuery -->
+      <script src="{{ PUBLIC_PATH }}/js/jquery.min.js"></script>
+      <!-- Bootstrap -->
+      <script src="{{ PUBLIC_PATH }}/js/bootstrap.min.js"></script>
+      <!-- Custom Theme -->
+      <script src="{{ PUBLIC_PATH }}/js/public.js"></script>
+    {% endblock %}
+  </body>
+</html>

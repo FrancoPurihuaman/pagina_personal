@@ -1,0 +1,114 @@
+// Tipografia
+// Fuente base para todas las paginas
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+// Fuente para el logo => font-family: 'Courgette', cursive;
+@import url("https://fonts.googleapis.com/css?family=Courgette|Roboto+Condensed|Montserrat|Droid+Serif");
+
+// Generales ----------------------------
+body {
+  padding-top: 0rem;
+  color: #5a5a5a;
+  // font-family: 'Popins', sans-serif;
+  font-family: 'Merriweather', sans-serif;
+  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main{
+  flex: 1;
+}
+
+.container {
+  padding: 0px 2.5em;
+}
+
+.f-separator {
+  border-top: 1px solid $color_pardo;
+}
+
+
+// Botones  -----------------------------
+.f-btn {
+  @include button($color_tema, #fff);
+
+  border-radius: 0px;
+  color: #fff;
+}
+
+
+// Links  -------------------------------
+.f-link {
+  text-decoration : none;
+
+  &:link, &:visited{
+    color: inherit;
+  }
+
+  &:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+  &:active{
+    color: inherit;
+  }
+}
+
+
+// Colores ------------------------------
+.f-color-theme {
+  color:  $color_tema;
+}
+
+.f-bg-theme {
+  background-color: $color_tema;
+}
+
+.f-color-co {
+  color: $color_celeste_osc;
+}
+
+.f-bg-co {
+  background-color: $color_celeste_osc;
+}
+
+.f-color-pardo {
+  color: $color_pardo;
+}
+
+.f-bg-pardo {
+  background-color: $color_pardo;
+}
+
+
+// Alertas
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
+.alert-danger, .alert-error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert ul {
+  padding-left : 15px;
+  text-align: left;
+}
